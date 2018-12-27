@@ -1,0 +1,21 @@
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\B-3-Operators\BL-3-Start\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.csprojAssemblyReference.cache
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\B-3-Operators\BL-3-Start\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.csproj.CoreCompileInputs.cache
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\B-3-Operators\BL-3-Start\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.exe.config
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\B-3-Operators\BL-3-Start\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.exe
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\B-3-Operators\BL-3-Start\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.pdb
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\B-3-Operators\BL-3-Start\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.exe
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\B-3-Operators\BL-3-Start\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.pdb
+d:\ITAcademy\03-12-2018\GIT\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.exe.config
+d:\ITAcademy\03-12-2018\GIT\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.exe
+d:\ITAcademy\03-12-2018\GIT\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.pdb
+d:\ITAcademy\03-12-2018\GIT\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.csprojAssemblyReference.cache
+d:\ITAcademy\03-12-2018\GIT\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.csproj.CoreCompileInputs.cache
+d:\ITAcademy\03-12-2018\GIT\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.exe
+d:\ITAcademy\03-12-2018\GIT\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.pdb
+D:\GitHub\03-12-2018\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.exe.config
+D:\GitHub\03-12-2018\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.exe
+D:\GitHub\03-12-2018\B-3-Operators\B-3-Operators\bin\Debug\B-3-Operators.pdb
+D:\GitHub\03-12-2018\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.csprojAssemblyReference.cache
+D:\GitHub\03-12-2018\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.csproj.CoreCompileInputs.cache
+D:\GitHub\03-12-2018\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.exe
+D:\GitHub\03-12-2018\B-3-Operators\B-3-Operators\obj\Debug\B-3-Operators.pdb
