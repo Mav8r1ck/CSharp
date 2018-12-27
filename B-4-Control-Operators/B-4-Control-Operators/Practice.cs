@@ -344,20 +344,78 @@ namespace Basic.Lesson_4._1
         //B4-P23/25 IfElse_Calcultor
         public static void B4_P23_25_IfElse_Calcultor()
         {
-            
+            Console.WriteLine("Enter first number");
+            int firstNumber = Convert.ToInt32(answer());
+            Console.WriteLine("Enter second number");
+            int secondNumber = Convert.ToInt32(answer());
+            Console.WriteLine("Which math operation would you like doing? (+, -, *, /)");
+            if (answer() == "+") Console.WriteLine(Addition(firstNumber, secondNumber));
+            else if (answer() == "-") Console.WriteLine(Subtraction(firstNumber, secondNumber));
+            else if (answer() == "*") Console.WriteLine(Multiplication(firstNumber, secondNumber));
+            else if (answer() == "/") Console.WriteLine(Division(firstNumber, secondNumber));
+            else Console.WriteLine("Wrong symbol");
         }
 
+        #region Calculator
+        public static int Addition(int firstNumber, int secondNumber)
+        {
+            return (firstNumber + secondNumber);
+        }
+
+        public static int Subtraction(int firstNumber, int secondNumber)
+        {
+            return (firstNumber - secondNumber);
+        }
+
+        public static int Multiplication(int firstNumber, int secondNumber)
+        {
+            return (firstNumber * secondNumber);
+        }
+
+        public static int Division(int firstNumber, int secondNumber)
+        {
+            return (firstNumber / secondNumber);
+        }
+
+        # endregion
 
         //B4-P24_25 Switch_Calculator
         public static void B4_P24_25_Switch_Calculator()
         {
-            
+            Console.WriteLine("Enter first number");
+            int firstNumber = Convert.ToInt32(answer());
+            Console.WriteLine("Enter second number");
+            int secondNumber = Convert.ToInt32(answer());
+            Console.WriteLine("Which math operation would you like doing? (+, -, *, /)");
+            switch (answer())
+            {
+                case "+":
+                    Console.WriteLine(Addition(firstNumber, secondNumber));
+                    break;
+                case "-":
+                    Console.WriteLine(Subtraction(firstNumber, secondNumber));
+                    break;
+                case "*":
+                    Console.WriteLine(Multiplication(firstNumber, secondNumber));
+                    break;
+                case "/":
+                    Console.WriteLine(Division(firstNumber, secondNumber));
+                    break;
+                default:
+                    Console.WriteLine("Wrong symbol");
+                    break;
+            }
         }
 
 
         //B4-P25/25 Cycle_WordRevercse
         public static void B4_P25_25_Cycle_WordRevercse()
         {
+            Console.WriteLine("Enter word for reverse");
+            string word = Console.ReadLine();
+            char[] charArray = word.ToCharArray();
+            Array.Reverse(charArray);
+            Console.WriteLine(new string(charArray));
         }
     }
 }
