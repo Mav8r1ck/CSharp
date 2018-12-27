@@ -1,0 +1,14 @@
+d:\ITAcademy\03-12-2018\GIT\B-4-Control-Operators\B-4-Control-Operators\bin\Debug\Basic.Lesson_4._1.exe.config
+d:\ITAcademy\03-12-2018\GIT\B-4-Control-Operators\B-4-Control-Operators\bin\Debug\Basic.Lesson_4._1.exe
+d:\ITAcademy\03-12-2018\GIT\B-4-Control-Operators\B-4-Control-Operators\bin\Debug\Basic.Lesson_4._1.pdb
+d:\ITAcademy\03-12-2018\GIT\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\B-4-Control-Operators.csprojAssemblyReference.cache
+d:\ITAcademy\03-12-2018\GIT\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\B-4-Control-Operators.csproj.CoreCompileInputs.cache
+d:\ITAcademy\03-12-2018\GIT\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\Basic.Lesson_4._1.exe
+d:\ITAcademy\03-12-2018\GIT\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\Basic.Lesson_4._1.pdb
+D:\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\B-4-Control-Operators.csprojAssemblyReference.cache
+D:\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\B-4-Control-Operators.csproj.CoreCompileInputs.cache
+D:\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\Basic.Lesson_4._1.exe
+D:\B-4-Control-Operators\B-4-Control-Operators\obj\Debug\Basic.Lesson_4._1.pdb
+D:\B-4-Control-Operators\B-4-Control-Operators\bin\Debug\Basic.Lesson_4._1.exe.config
+D:\B-4-Control-Operators\B-4-Control-Operators\bin\Debug\Basic.Lesson_4._1.exe
+D:\B-4-Control-Operators\B-4-Control-Operators\bin\Debug\Basic.Lesson_4._1.pdb
