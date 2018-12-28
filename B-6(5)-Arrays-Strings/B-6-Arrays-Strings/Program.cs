@@ -13,7 +13,9 @@ namespace Base.Lesson_6
             //Array();
             //Matrix();
             //arraySort();
-            Pyatnashki();
+            //Pyatnashki();
+            //CutString();
+            PoemExample();
             Console.ReadLine();
         }
 
@@ -237,13 +239,66 @@ namespace Base.Lesson_6
             }
         }
 
-        public static void wrongMove()
+        public static void wrongMove() //for Pyatnashki
         {
             Console.WriteLine("You can't do that");
         }
+
+        public static void CutString()
+        {
+            Console.WriteLine("Enter string");
+            string example = Console.ReadLine();
+            char[] array = example.ToCharArray();
+            if (array.Length > 13)
+            {
+                char[] result = new char[13];
+                for (int i = 0; i < 13; i++)
+                {
+                    result[i] = array[i];
+                }
+                string answer = new string(result);
+                Console.WriteLine(answer + "...");
+            }
+        }
+
         public static void PoemExample()
         {
-            
+            Console.WriteLine("Enter string");
+            string example = "olala;lala;oops;"; /*Console.ReadLine();
+            char[] array = example.ToCharArray();
+            int index = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == ';') index++;
+            }
+            char[][] poemArray = new char[index][];
+            int poemIndex = 0;
+            int tempIndex = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if(array[i] == ';')
+                {  
+                    for (int j = 0; j < ((i - tempIndex) - 1); j++)
+                    {
+                        poemArray[poemIndex] = new char[(i - tempIndex)];
+                        poemArray[poemIndex][j] = array[j];
+                    }
+                    poemIndex++;
+                    tempIndex = i;
+                }
+            }
+            for (int i = 0; i < index; i++)
+            {
+                Console.WriteLine(new string(poemArray[i]));
+            }
+            */
+            string[] arrayExample = example.Split(';');
+            foreach (string letter in arrayExample)
+            {
+                string l = letter.Replace("l","ll");
+                l = l.Replace("oo","o");
+                Console.WriteLine(l);
+            }
         }
     }
 }
