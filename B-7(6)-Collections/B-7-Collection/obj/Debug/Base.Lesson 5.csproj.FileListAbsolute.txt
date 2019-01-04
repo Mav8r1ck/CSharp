@@ -1,0 +1,7 @@
+D:\ITAcademy\M-ND1-33-18-10\GIT\Lessons\Base.Lesson 5\Base.Lesson 5\Base.Lesson 5\bin\Debug\Base.Lesson 5.exe.config
+D:\ITAcademy\M-ND1-33-18-10\GIT\Lessons\Base.Lesson 5\Base.Lesson 5\Base.Lesson 5\bin\Debug\Base.Lesson 5.exe
+D:\ITAcademy\M-ND1-33-18-10\GIT\Lessons\Base.Lesson 5\Base.Lesson 5\Base.Lesson 5\bin\Debug\Base.Lesson 5.pdb
+D:\ITAcademy\M-ND1-33-18-10\GIT\Lessons\Base.Lesson 5\Base.Lesson 5\Base.Lesson 5\obj\Debug\Base.Lesson 5.csprojAssemblyReference.cache
+D:\ITAcademy\M-ND1-33-18-10\GIT\Lessons\Base.Lesson 5\Base.Lesson 5\Base.Lesson 5\obj\Debug\Base.Lesson 5.csproj.CoreCompileInputs.cache
+D:\ITAcademy\M-ND1-33-18-10\GIT\Lessons\Base.Lesson 5\Base.Lesson 5\Base.Lesson 5\obj\Debug\Base.Lesson 5.exe
+D:\ITAcademy\M-ND1-33-18-10\GIT\Lessons\Base.Lesson 5\Base.Lesson 5\Base.Lesson 5\obj\Debug\Base.Lesson 5.pdb

@@ -1,0 +1,7 @@
+D:\B-7(6)-Collections\B-7-Collection\bin\Debug\Base.Lesson 5.exe.config
+D:\B-7(6)-Collections\B-7-Collection\bin\Debug\Base.Lesson 5.exe
+D:\B-7(6)-Collections\B-7-Collection\bin\Debug\Base.Lesson 5.pdb
+D:\B-7(6)-Collections\B-7-Collection\obj\Debug\B-7-Collection.csprojAssemblyReference.cache
+D:\B-7(6)-Collections\B-7-Collection\obj\Debug\B-7-Collection.csproj.CoreCompileInputs.cache
+D:\B-7(6)-Collections\B-7-Collection\obj\Debug\Base.Lesson 5.exe
+D:\B-7(6)-Collections\B-7-Collection\obj\Debug\Base.Lesson 5.pdb
