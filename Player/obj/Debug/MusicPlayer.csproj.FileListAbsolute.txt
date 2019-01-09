@@ -1,0 +1,7 @@
+D:\Player\obj\Debug\MusicPlayer.csprojAssemblyReference.cache
+D:\Player\obj\Debug\MusicPlayer.csproj.CoreCompileInputs.cache
+D:\Player\bin\Debug\MusicPlayer.exe.config
+D:\Player\bin\Debug\MusicPlayer.exe
+D:\Player\bin\Debug\MusicPlayer.pdb
+D:\Player\obj\Debug\MusicPlayer.exe
+D:\Player\obj\Debug\MusicPlayer.pdb
