@@ -1,0 +1,7 @@
+D:\B-9-Extention-Methods-Deconstruction\B-9-Extention-Methods-Deconstruction\bin\Debug\Base-Lesson-9.exe.config
+D:\B-9-Extention-Methods-Deconstruction\B-9-Extention-Methods-Deconstruction\bin\Debug\Base-Lesson-9.exe
+D:\B-9-Extention-Methods-Deconstruction\B-9-Extention-Methods-Deconstruction\bin\Debug\Base-Lesson-9.pdb
+D:\B-9-Extention-Methods-Deconstruction\B-9-Extention-Methods-Deconstruction\obj\Debug\B-9-Extention-Methods-Deconstruction.csprojAssemblyReference.cache
+D:\B-9-Extention-Methods-Deconstruction\B-9-Extention-Methods-Deconstruction\obj\Debug\B-9-Extention-Methods-Deconstruction.csproj.CoreCompileInputs.cache
+D:\B-9-Extention-Methods-Deconstruction\B-9-Extention-Methods-Deconstruction\obj\Debug\Base-Lesson-9.exe
+D:\B-9-Extention-Methods-Deconstruction\B-9-Extention-Methods-Deconstruction\obj\Debug\Base-Lesson-9.pdb
