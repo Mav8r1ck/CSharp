@@ -22,6 +22,14 @@ namespace BL_8_Struct_Enum_Tuple_Generic
                 this.x = x;
                 this.y = y;
             }
+            public static bool operator ==(Square first, Square second)
+            {
+                return first.Equals(second);
+            }
+            public static bool operator !=(Square first, Square second)
+            {
+                return first.Equals(second);
+            }
         }
 
         /// <summary>
@@ -54,7 +62,11 @@ namespace BL_8_Struct_Enum_Tuple_Generic
                 {
                     if(itemPosition != i)
                     {
-                        if (item.height == squares[i].height && item.lenght == squares[i].lenght && item.x == squares[i].x && item.y == squares[i].y) duplicate++;
+                        //if (item.height == squares[i].height && item.lenght == squares[i].lenght && item.x == squares[i].x && item.y == squares[i].y) duplicate++;
+                        if (item == squares[i])
+                        {
+                            duplicate++;
+                        }
                     }
                 }
                 itemPosition++;
