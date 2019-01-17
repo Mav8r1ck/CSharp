@@ -24,9 +24,7 @@ namespace MusicPlayer
         public bool? Like = null;
         public bool? LikeDislike(bool like)
         {
-            if(like == true) Like = true;
-            else if(like == false) Like = false;
-            return Like;
+            return Like = like;
         }
     }
 }
