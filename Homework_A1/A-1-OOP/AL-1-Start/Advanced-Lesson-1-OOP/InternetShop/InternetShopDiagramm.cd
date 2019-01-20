@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="1&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;many">
+    <Position X="1.281" Y="1.073" Height="1.916" Width="0.7" />
+  </Comment>
+  <Comment CommentText="1_______________________________________1">
+    <Position X="2.063" Y="3.313" Height="0.291" Width="2.408" />
+  </Comment>
+  <Comment CommentText="1___________________________________many">
+    <Position X="2.021" Y="0.812" Height="0.291" Width="2.45" />
+  </Comment>
+  <Class Name="Advanced_Lesson_1_OOP.InternetShop.BayersBasket" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>InternetShop\BayersBasket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Advanced_Lesson_1_OOP.InternetShop.WareHouse" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>InternetShop\WareHouse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Article" />
+    </ShowAsAssociation>
+  </Class>
+  <Struct Name="Advanced_Lesson_1_OOP.InternetShop.BayersData" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InternetShop\BayersBasket.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Advanced_Lesson_1_OOP.InternetShop.Article" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABIAAAAAACAAgAAAAAAAAAAAAAAACAAAiA=</HashCode>
+      <FileName>InternetShop\WareHouse.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
