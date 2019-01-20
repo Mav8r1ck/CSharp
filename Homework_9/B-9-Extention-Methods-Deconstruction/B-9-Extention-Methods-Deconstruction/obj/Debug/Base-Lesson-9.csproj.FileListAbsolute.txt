@@ -1,0 +1,7 @@
+D:\ITAcademy\Lessons-Git-Templates\Base-Lesson-9\Base-Lesson-9\Base-Lesson-9\bin\Debug\Base-Lesson-9.exe.config
+D:\ITAcademy\Lessons-Git-Templates\Base-Lesson-9\Base-Lesson-9\Base-Lesson-9\bin\Debug\Base-Lesson-9.exe
+D:\ITAcademy\Lessons-Git-Templates\Base-Lesson-9\Base-Lesson-9\Base-Lesson-9\bin\Debug\Base-Lesson-9.pdb
+D:\ITAcademy\Lessons-Git-Templates\Base-Lesson-9\Base-Lesson-9\Base-Lesson-9\obj\Debug\Base-Lesson-9.csprojAssemblyReference.cache
+D:\ITAcademy\Lessons-Git-Templates\Base-Lesson-9\Base-Lesson-9\Base-Lesson-9\obj\Debug\Base-Lesson-9.csproj.CoreCompileInputs.cache
+D:\ITAcademy\Lessons-Git-Templates\Base-Lesson-9\Base-Lesson-9\Base-Lesson-9\obj\Debug\Base-Lesson-9.exe
+D:\ITAcademy\Lessons-Git-Templates\Base-Lesson-9\Base-Lesson-9\Base-Lesson-9\obj\Debug\Base-Lesson-9.pdb
