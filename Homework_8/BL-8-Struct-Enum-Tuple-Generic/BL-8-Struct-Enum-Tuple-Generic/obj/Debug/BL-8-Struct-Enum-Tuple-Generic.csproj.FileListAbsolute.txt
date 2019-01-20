@@ -1,0 +1,7 @@
+D:\BL-8-Struct-Enum-Tuple-Generic\BL-8-Struct-Enum-Tuple-Generic\bin\Debug\BL-8-Struct-Enum-Tuple-Generic.exe.config
+D:\BL-8-Struct-Enum-Tuple-Generic\BL-8-Struct-Enum-Tuple-Generic\bin\Debug\BL-8-Struct-Enum-Tuple-Generic.exe
+D:\BL-8-Struct-Enum-Tuple-Generic\BL-8-Struct-Enum-Tuple-Generic\bin\Debug\BL-8-Struct-Enum-Tuple-Generic.pdb
+D:\BL-8-Struct-Enum-Tuple-Generic\BL-8-Struct-Enum-Tuple-Generic\obj\Debug\BL-8-Struct-Enum-Tuple-Generic.csprojAssemblyReference.cache
+D:\BL-8-Struct-Enum-Tuple-Generic\BL-8-Struct-Enum-Tuple-Generic\obj\Debug\BL-8-Struct-Enum-Tuple-Generic.csproj.CoreCompileInputs.cache
+D:\BL-8-Struct-Enum-Tuple-Generic\BL-8-Struct-Enum-Tuple-Generic\obj\Debug\BL-8-Struct-Enum-Tuple-Generic.exe
+D:\BL-8-Struct-Enum-Tuple-Generic\BL-8-Struct-Enum-Tuple-Generic\obj\Debug\BL-8-Struct-Enum-Tuple-Generic.pdb
