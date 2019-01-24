@@ -42,6 +42,18 @@ namespace MusicPlayer
             }
         }
 
+        ISkin skin;
+
+        public Player()
+        {
+            skin = new ClassicSkin();
+        }
+
+        public Player(string color)
+        {
+            skin = new ColorSkin(color);
+        }
+
         public List<Song> Songs { get; private set; } //B7-Player1/2. SongsListShuffle
 
         public void VolumeUp()
@@ -82,7 +94,7 @@ namespace MusicPlayer
 
                 //L9 -HW -Player -2/3
 
-                Console.WriteLine($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}"); 
+                skin.Render($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}"); 
                 Console.ResetColor();
                 System.Threading.Thread.Sleep(1000);
             }
@@ -107,10 +119,10 @@ namespace MusicPlayer
                 return;
             }
             _isPlaying = true;
-            if (filteredSongs.Count() == 0) Console.WriteLine("Nothing for play");
+            if (filteredSongs.Count() == 0) skin.Render("Nothing for play");
             else
             {
-                Console.WriteLine("Filtered list");
+                skin.Render("Filtered list");
                 foreach (var song in Songs)
                 {
                     if (song.Like == true) Console.ForegroundColor = ConsoleColor.Green;     //BL8 -Player 2/3. LikeDislike
@@ -118,7 +130,7 @@ namespace MusicPlayer
 
                     //L9 -HW -Player -2/3
 
-                    Console.WriteLine($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}");
+                    skin.Render($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}");
                     Console.ResetColor();
                     System.Threading.Thread.Sleep(1000);
                 }
@@ -132,18 +144,18 @@ namespace MusicPlayer
                 return;
             }
             _isPlaying = false;
-            Console.WriteLine("Player has stopped");
+            skin.Render("Player has stopped");
         }
 
         public void Locked()
         {
             _isLocked = true;
-            Console.WriteLine("Player is locked");
+            skin.Render("Player is locked");
         }
         public void Unlock()
         {
             _isLocked = false;
-            Console.WriteLine("Player is unlocked");
+            skin.Render("Player is unlocked");
         }
 
         public void Add(List<Song> songList)
@@ -179,8 +191,9 @@ namespace MusicPlayer
             foreach (var song in Songs)
             {
                 Tuple<string, int, int, int> songData = GetSongData(song);
-                Console.WriteLine($"Name: {songData.Item1}, Time: {songData.Item2}:{songData.Item3}:{songData.Item4}");
+                skin.Render($"Name: {songData.Item1}, Time: {songData.Item2}:{songData.Item3}:{songData.Item4}");
             }
+            skin.Clear();
         }
 
         public List<Song> FilterByGenre(string genre)                       //BL8-Player4/4. FilterByGenre

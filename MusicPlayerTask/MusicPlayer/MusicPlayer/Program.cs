@@ -10,7 +10,8 @@ namespace MusicPlayer
     {
         static void Main(string[] args)
         {
-            var player = new Player();
+            //var player = new Player();
+            var player = new Player("Blue");
             //player.Volume = 20;
             int min;
             int max;
@@ -35,17 +36,17 @@ namespace MusicPlayer
             /*player.Volume = -25;
             Console.WriteLine(player.Volume);
             */
-            //player.Stop();
-            //player.Shuffle();                                       //B7-Player1/2. SongsListShuffle
-            //player.ListSong();                                      //BL8 -Player1/3.SongTuples
-            //player.Play();
-            //player.Stop();
-            //player.SongsListSort();                                 //B7-Player2/2. SongsListSort
-            //player.Play();
-            //player.Stop();
-            //player.Shuffle();
-            //player.Play();
-            //player.Stop();
+            player.Stop();
+            player.Shuffle();                                       //B7-Player1/2. SongsListShuffle
+            player.ListSong();                                      //BL8 -Player1/3.SongTuples
+            player.Play();
+            player.Stop();
+            player.SongsListSort();                                 //B7-Player2/2. SongsListSort
+            player.Play();
+            player.Stop();
+            player.Shuffle();
+            player.Play();
+            player.Stop();
             player.Play(player.FilterByGenre("Classic"));            //BL8-Player4/4. FilterByGenre
             player.Stop();
             player.Play(player.FilterByGenre("Metal"));
