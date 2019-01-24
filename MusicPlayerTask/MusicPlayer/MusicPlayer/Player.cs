@@ -185,12 +185,16 @@ namespace MusicPlayer
 
         public List<Song> FilterByGenre(string genre)                       //BL8-Player4/4. FilterByGenre
         {
+            Song.SongGenres option;
             List<Song> filteredSongs = new List<Song>();
             foreach (var song in Songs)
             {
-                if(song.genre.ToString() == genre)
+                if(Enum.TryParse(genre, out option))
                 {
-                    filteredSongs.Add(song);
+                    if(Enum.IsDefined(typeof(Song.SongGenres), option))
+                    {
+                        filteredSongs.Add(song);
+                    }
                 }
             }
             return filteredSongs;
