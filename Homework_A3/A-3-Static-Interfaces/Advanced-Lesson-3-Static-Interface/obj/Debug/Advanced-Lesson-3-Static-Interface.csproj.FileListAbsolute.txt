@@ -1,0 +1,14 @@
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\A-3-Static-Interfaces\AL-3-Start\Advanced-Lesson-3-Static-Interface\Advanced-Lesson-3-Static-Interface\bin\Debug\Advanced-Lesson-3-Static-Interface.exe.config
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\A-3-Static-Interfaces\AL-3-Start\Advanced-Lesson-3-Static-Interface\Advanced-Lesson-3-Static-Interface\bin\Debug\Advanced-Lesson-3-Static-Interface.exe
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\A-3-Static-Interfaces\AL-3-Start\Advanced-Lesson-3-Static-Interface\Advanced-Lesson-3-Static-Interface\bin\Debug\Advanced-Lesson-3-Static-Interface.pdb
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\A-3-Static-Interfaces\AL-3-Start\Advanced-Lesson-3-Static-Interface\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.csprojAssemblyReference.cache
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\A-3-Static-Interfaces\AL-3-Start\Advanced-Lesson-3-Static-Interface\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.csproj.CoreCompileInputs.cache
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\A-3-Static-Interfaces\AL-3-Start\Advanced-Lesson-3-Static-Interface\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.exe
+D:\Dropbox\HrueSpace\IT Academy\C#\Code\A-3-Static-Interfaces\AL-3-Start\Advanced-Lesson-3-Static-Interface\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.pdb
+D:\A-3-Static-Interfaces\Advanced-Lesson-3-Static-Interface\bin\Debug\Advanced-Lesson-3-Static-Interface.exe.config
+D:\A-3-Static-Interfaces\Advanced-Lesson-3-Static-Interface\bin\Debug\Advanced-Lesson-3-Static-Interface.exe
+D:\A-3-Static-Interfaces\Advanced-Lesson-3-Static-Interface\bin\Debug\Advanced-Lesson-3-Static-Interface.pdb
+D:\A-3-Static-Interfaces\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.csprojAssemblyReference.cache
+D:\A-3-Static-Interfaces\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.csproj.CoreCompileInputs.cache
+D:\A-3-Static-Interfaces\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.exe
+D:\A-3-Static-Interfaces\Advanced-Lesson-3-Static-Interface\obj\Debug\Advanced-Lesson-3-Static-Interface.pdb
