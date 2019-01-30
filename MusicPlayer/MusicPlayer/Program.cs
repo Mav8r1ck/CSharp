@@ -15,7 +15,8 @@ namespace MusicPlayer
             player.Load(@"D:\WavForPlayer");
             player.SaveAsPlaylist();
             player.LoadPlaylist();
-            player.Play(player.playlist);
+            //player.Play(player.playlist);
+            //player.Play();
             player.Dispose();
             
 

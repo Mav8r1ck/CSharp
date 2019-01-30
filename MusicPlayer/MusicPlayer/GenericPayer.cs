@@ -14,7 +14,7 @@ namespace MusicPlayer
         const int MIN_VOLUME = 0;
         const int MAX_VOLUME = 100;
         private ISkin skin;
-        internal ISkin Skin { get => skin; private set => skin = value; }
+        internal ISkin Skin { get => skin; set => skin = value; }
         public List<T> Items; //B7-Player1/2. SongsListShuffle
         
 

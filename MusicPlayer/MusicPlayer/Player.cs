@@ -16,8 +16,8 @@ namespace MusicPlayer
     {
         public const string directory = @"D:\WavForPlayer\";
         public List<Song> playlist;
-        private SoundPlayer _player;
-        private bool disposed = false;
+        private SoundPlayer _player= new SoundPlayer();
+        private bool _disposed = false;
         public Player() : base()
         {
 
@@ -30,26 +30,7 @@ namespace MusicPlayer
 
         public override void Play()
         {
-            if (_isLocked)
-            {
-                return;
-            }
-            _isPlaying = true;
-            foreach (var song in Items)
-            {
-                //if (song.Like == true) Console.ForegroundColor = ConsoleColor.Green;     //BL8 -Player 2/3. LikeDislike
-                //else if (song.Like == false) Console.ForegroundColor = ConsoleColor.Red;
-
-                //L9 -HW -Player -2/3
-
-                //Skin.Render($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}"); 
-                _player = new SoundPlayer((directory + song.Name));
-                Skin.Render($"Player is playing: {song.Name}");
-                _player.PlaySync();
-                //_player.Dispose();
-                //Console.ResetColor();
-                System.Threading.Thread.Sleep(1000);
-            }
+            Play(Items);
         }
 
         public void Play(bool loop) //B7-Player1/2. SongsListShuffle
@@ -77,20 +58,13 @@ namespace MusicPlayer
                 //Skin.Render("Filtered list");
                 foreach (var song in Items)
                 {
-                    //if (song.Like == true) Console.ForegroundColor = ConsoleColor.Green;     //BL8 -Player 2/3. LikeDislike
-                    //else if (song.Like == false) Console.ForegroundColor = ConsoleColor.Red;
-
-                    //L9 -HW -Player -2/3
-
-                    //Skin.Render($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}");
-                    _player = new SoundPlayer((directory + song.Name));
                     Skin.Render($"Player is playing: {song.Name}");
+                    _player.SoundLocation = song.Path;
                     _player.PlaySync();
-                    //_player.Dispose();
-                    //Console.ResetColor();
                     System.Threading.Thread.Sleep(1000);
                 }
             }
+            Clear();
         }
 
         //B7-Player2/2. SongsListSort
@@ -150,7 +124,7 @@ namespace MusicPlayer
                     {
                         Name = file.Name,
                         Duration = file.Length,
-                        Path = file.DirectoryName
+                        Path = file.FullName
                     });
                 }
             }
@@ -189,16 +163,18 @@ namespace MusicPlayer
         protected virtual void Dispose(bool disposing)
         {
             // Check to see if Dispose has already been called.
-            if (!this.disposed)
+            if (!this._disposed)
             {
                 // If disposing equals true, dispose all managed
                 // and unmanaged resources.
                 if (disposing)
                 {
-                    // Dispose managed resources.
-                    _player.Dispose();
+                    playlist = null;
+                    Skin = null;
+                    Items = null;
                 }
-                disposed = true;
+                _player.Dispose();
+                _disposed = true;
             }
         }
         ~Player()
