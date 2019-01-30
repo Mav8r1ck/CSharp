@@ -45,21 +45,20 @@ namespace Advanced_Lesson_3_Static_Interface
             
         }
 
-        public static void GuessType<T>(T item)
+        public static void GuessType<T>(T passedString)
         {
-            var type = item.GetType();
-            switch (item.GetType().Name)
+            switch (passedString)
             {
-                case "String":
+                case string item:
                     Console.WriteLine($"Item's type is {item.GetType().Name}");
                     break;
-                case "Int32":
-                    Console.WriteLine($"Item's type is {item.GetType().Name}");
+                case int item when item < 0:
+                    Console.WriteLine($"Item's type is {item.GetType().Name} < 0");
                     break;
-                case "UInt32":
-                    Console.WriteLine($"Item's type is {item.GetType().Name}");
+                case int item when item > 0:
+                    Console.WriteLine($"Item's type is {item.GetType().Name} > 0");
                     break;
-                case "DateTime":
+                case DateTime item:
                     Console.WriteLine($"Item's type is {item.GetType().Name}");
                     break;
                 default:
