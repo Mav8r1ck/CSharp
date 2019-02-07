@@ -14,6 +14,12 @@ namespace MusicPlayer
 {
     public class Player : GenericPlayer<Song>, IDisposable
     {
+
+        public event PlayerStateHandler SongStarted;
+        public event PlayerStateHandler SongsListChanged;
+        public event PlayerStateHandler PlayerStarted;
+
+
         public const string directory = @"D:\WavForPlayer\";
         public List<Song> playlist;
         private SoundPlayer _player= new SoundPlayer();
@@ -23,10 +29,10 @@ namespace MusicPlayer
 
         }
 
-        public Player(string color) : base(color)
-        {
+        //public Player(string color) //: base(color)
+        //{
 
-        }
+        //}
 
         public override void Play()
         {
@@ -51,14 +57,16 @@ namespace MusicPlayer
             {
                 return;
             }
+            PlayerStarted(this, new PlayerEventArgs("Player started"));
             _isPlaying = true;
-            if (filteredSongs.Count() == 0) Skin.Render("Nothing for play");
+            if (filteredSongs.Count() == 0) SongStarted(this, new PlayerEventArgs("Nothing for play"));
             else
             {
                 //Skin.Render("Filtered list");
                 foreach (var song in Items)
                 {
-                    Skin.Render($"Player is playing: {song.Name}");
+                    //Skin.Render($"Player is playing: {song.Name}");
+                    SongStarted(this, new PlayerEventArgs($"Player is playing: {song.Name}"));
                     _player.SoundLocation = song.Path;
                     _player.PlaySync();
                     System.Threading.Thread.Sleep(1000);
@@ -71,7 +79,8 @@ namespace MusicPlayer
         public void SongsListSort()
         {
             this.Items = this.Items.SortSongs();                        //L9 -HW -Player -1/3    
-        }
+            SongsListChanged(this, new PlayerEventArgs("SongList changed"));
+    }
 
         public Tuple<string, int, int, int> GetSongData(Song song)      //BL8 -Player1/3.SongTuples
         {
@@ -89,9 +98,9 @@ namespace MusicPlayer
             foreach (var song in Items)
             {
                 Tuple<string, int, int, int> songData = GetSongData(song);
-                Skin.Render($"Name: {songData.Item1}, Time: {songData.Item2}:{songData.Item3}:{songData.Item4}");
+                //Skin.Render($"Name: {songData.Item1}, Time: {songData.Item2}:{songData.Item3}:{songData.Item4}");
             }
-            Skin.Clear();
+            //Skin.Clear();
         }
 
         public List<Song> FilterByGenre(string genre)                       //BL8-Player4/4. FilterByGenre
@@ -108,6 +117,7 @@ namespace MusicPlayer
                     }
                 }
             }
+            SongsListChanged(this, new PlayerEventArgs("SongList filtered"));
             return filteredSongs;
         }
 
@@ -170,7 +180,7 @@ namespace MusicPlayer
                 if (disposing)
                 {
                     playlist = null;
-                    Skin = null;
+                    //Skin = null;
                     Items = null;
                 }
                 _player.Dispose();
