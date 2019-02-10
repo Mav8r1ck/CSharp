@@ -18,6 +18,7 @@ namespace MusicPlayer
         public event PlayerStateHandler SongStarted;
         public event PlayerStateHandler SongsListChanged;
         public event PlayerStateHandler PlayerStarted;
+        public event PlayerStateHandler OnError;
 
 
         public const string directory = @"D:\WavForPlayer\";
@@ -36,7 +37,7 @@ namespace MusicPlayer
 
         public override void Play()
         {
-            Play(Items);
+            PlayAsync(Items);
         }
 
         public void Play(bool loop) //B7-Player1/2. SongsListShuffle
@@ -51,7 +52,7 @@ namespace MusicPlayer
             }
         }
 
-        public override void Play(List<Song> filteredSongs)          //BL8-Player4/4. FilterByGenre
+        public override async void PlayAsync(List<Song> filteredSongs)          //BL8-Player4/4. FilterByGenre
         {
             if (_isLocked)
             {
@@ -59,21 +60,48 @@ namespace MusicPlayer
             }
             PlayerStarted(this, new PlayerEventArgs("Player started"));
             _isPlaying = true;
-            if (filteredSongs.Count() == 0) SongStarted(this, new PlayerEventArgs("Nothing for play"));
-            else
+            try
             {
-                //Skin.Render("Filtered list");
-                foreach (var song in Items)
+                if (filteredSongs.Count() == 0) throw new FileNotFoundException();
+                else
                 {
-                    //Skin.Render($"Player is playing: {song.Name}");
-                    SongStarted(this, new PlayerEventArgs($"Player is playing: {song.Name}"));
-                    _player.SoundLocation = song.Path;
-                    _player.PlaySync();
-                    System.Threading.Thread.Sleep(1000);
+
+                    //Skin.Render("Filtered list");
+                    foreach (var song in Items)
+                    {
+                        //Skin.Render($"Player is playing: {song.Name}");
+
+
+                        _player.SoundLocation = song.Path;
+                        await Task.Run(() =>
+                            {
+                                SongStarted(this, new PlayerEventArgs($"Player is playing: {song.Name}"));
+                                _player.PlaySync();
+                                System.Threading.Thread.Sleep(1000);
+                            });
+                        //PlaySongAsync(song);
+
+                    }
                 }
+            }
+            catch(FileNotFoundException ex)
+            {
+                OnError(this, new PlayerEventArgs("Can't find files"));
+            }
+            catch (InvalidOperationException ex)
+            {
+                OnError(this, new PlayerEventArgs("Unknown file's format"));
             }
             Clear();
         }
+        //public async Task PlaySongAsync(Song song)
+        //{
+        //    await Task.Run(() => 
+        //    {
+        //        SongStarted(this, new PlayerEventArgs($"Player is playing: {song.Name}"));
+        //        _player.PlaySync();
+        //    });
+        //}
 
         //B7-Player2/2. SongsListSort
         public void SongsListSort()

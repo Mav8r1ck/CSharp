@@ -8,6 +8,8 @@ namespace MusicPlayer
 {
     public class Visualizer
     {
+        private UserCommands result;
+        private bool flag = false;
         private ISkin skin;
         internal ISkin Skin { get => skin; set => skin = value; }
         public Visualizer(Player player, string color)
@@ -26,11 +28,60 @@ namespace MusicPlayer
             player.SongsListChanged += Show_Message;
             player.VolumeChanged += Show_Message;
             player.SongStarted += Show_Message;
+            player.OnError += Show_Message;
+            //WaitForCommands(player);
         }
 
         private static void Show_Message(object sender, PlayerEventArgs item)
         {
             Console.WriteLine(item.Message);
         }
+        
+        public void WaitForCommands(Player player)              //PlayerLA8.Player 2/2**2**2**.AsyncCommands
+        {
+            Console.WriteLine($"You have commands: {UserCommands.Start} push (1), {UserCommands.Stop} push (2), {UserCommands.LoadPlaylist} push (3), {UserCommands.LoadFolder} push (4), push (0) for Exit");
+            while (!flag)
+            {
+                string userChoice = Console.ReadLine();
+                if (Enum.TryParse(userChoice, out result))
+                {
+                    switch (result)
+                    {
+                        case UserCommands.Start:
+                            player.Play();
+
+                            break;
+                        case UserCommands.Stop:
+                            player.Stop();
+                            flag = true;
+                            break;
+                        case UserCommands.LoadPlaylist:
+                            player.LoadPlaylist();
+
+                            break;
+                        case UserCommands.LoadFolder:
+                            Console.WriteLine("Enter directory for load");
+                            player.Load(Console.ReadLine());
+
+                            break;
+                        case UserCommands.Exit:
+                            flag = true;
+                            break;
+                        default:
+                            Console.WriteLine("Unknown command");
+                            break;
+                    }
+                }
+            }
+        }
+    }
+
+    public enum UserCommands : byte
+    {
+        Exit = 0,
+        Start = 0x01,
+        Stop = 0x02,
+        LoadPlaylist = 0x03,
+        LoadFolder = 0x04
     }
 }

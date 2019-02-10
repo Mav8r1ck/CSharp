@@ -23,8 +23,9 @@ namespace MusicPlayer
             player.Load(@"D:\WavForPlayer");
             player.SaveAsPlaylist();
             player.LoadPlaylist();
-            player.Play(player.playlist);
-            player.Play();
+            player.PlayAsync(player.playlist);
+            visualizer.WaitForCommands(player);
+            //player.Play();
             player.Dispose();
             
 
