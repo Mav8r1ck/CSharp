@@ -29,6 +29,7 @@ namespace MusicPlayer
             player.VolumeChanged += Show_Message;
             player.SongStarted += Show_Message;
             player.OnError += Show_Message;
+            player.OnWarning += Show_MessageForOnWarning;
             //WaitForCommands(player);
         }
 
@@ -36,7 +37,14 @@ namespace MusicPlayer
         {
             Console.WriteLine(item.Message);
         }
-        
+
+        private static void Show_MessageForOnWarning(object sender, PlayerEventArgs item)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(item.Message);
+            Console.ResetColor();
+        }
+
         public void WaitForCommands(Player player)              //PlayerLA8.Player 2/2**2**2**.AsyncCommands
         {
             Console.WriteLine($"You have commands: {UserCommands.Start} push (1), {UserCommands.Stop} push (2), {UserCommands.LoadPlaylist} push (3), {UserCommands.LoadFolder} push (4), push (0) for Exit");

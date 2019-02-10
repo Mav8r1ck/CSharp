@@ -19,9 +19,11 @@ namespace MusicPlayer
         public event PlayerStateHandler SongsListChanged;
         public event PlayerStateHandler PlayerStarted;
         public event PlayerStateHandler OnError;
+        public event PlayerStateHandler OnWarning;
 
 
         public const string directory = @"D:\WavForPlayer\";
+        public string directoryForLoad;
         public List<Song> playlist;
         private SoundPlayer _player= new SoundPlayer();
         private bool _disposed = false;
@@ -62,7 +64,11 @@ namespace MusicPlayer
             _isPlaying = true;
             try
             {
-                if (filteredSongs.Count() == 0) throw new FileNotFoundException();
+                if (filteredSongs.Count() == 0)
+                {
+                    throw new FileNotFoundException();
+                    throw new FiledToPlayException("Files didn't find", directoryForLoad);
+                }
                 else
                 {
 
@@ -91,6 +97,10 @@ namespace MusicPlayer
             catch (InvalidOperationException ex)
             {
                 OnError(this, new PlayerEventArgs("Unknown file's format"));
+            }
+            catch(FiledToPlayException ex)
+            {
+                OnWarning(this, new PlayerEventArgs($"{ex.Message}{ex._path}"));
             }
             Clear();
         }
@@ -151,8 +161,9 @@ namespace MusicPlayer
 
         public void Load(string directory)
         {
+            directoryForLoad = directory;
             List<Song> songs = new List<Song>();
-            var directoryInfo = new DirectoryInfo(directory);
+            var directoryInfo = new DirectoryInfo(directoryForLoad);
             var files = directoryInfo.GetFiles("*.wav");
             foreach (var file in files)
             {
