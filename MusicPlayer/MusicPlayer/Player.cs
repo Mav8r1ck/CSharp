@@ -67,7 +67,7 @@ namespace MusicPlayer
                 if (filteredSongs.Count() == 0)
                 {
                     throw new FileNotFoundException();
-                    throw new FiledToPlayException("Files didn't find", directoryForLoad);
+                    throw new FailedToPlayException("Files didn't find", directoryForLoad);
                 }
                 else
                 {
@@ -98,7 +98,7 @@ namespace MusicPlayer
             {
                 OnError(this, new PlayerEventArgs("Unknown file's format"));
             }
-            catch(FiledToPlayException ex)
+            catch(FailedToPlayException ex)
             {
                 OnWarning(this, new PlayerEventArgs($"{ex.Message}{ex._path}"));
             }

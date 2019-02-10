@@ -49,7 +49,7 @@
     <Compile Include="ClassicSkin.cs" />
     <Compile Include="ColorSkin.cs" />
     <Compile Include="Extantions\PlayerHelper.cs" />
-    <Compile Include="FiledToPlayException.cs" />
+    <Compile Include="FailedToPlayException.cs" />
     <Compile Include="GenericPayer.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerEventArgs.cs" />
