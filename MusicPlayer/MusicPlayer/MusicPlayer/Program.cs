@@ -11,21 +11,11 @@ namespace MusicPlayer
         static void Main(string[] args)
         {
 
-            var player = new Player();
-            var visualizer = new Visualizer(player, "Blue");
-            //player.PlayerLockedUnlocked += Show_Message;
-            //player.PlayerStarted += Show_Message;
-            //player.PlayerStopped += Show_Message;
-            //player.SongsListChanged += Show_Message;
-            //player.VolumeChanged += Show_Message;
-            //player.SongStarted += Show_Message;
-
+            var player = new Player("Red");
             player.Load(@"D:\WavForPlayer");
             player.SaveAsPlaylist();
             player.LoadPlaylist();
-            player.PlayAsync(player.playlist);
-            visualizer.WaitForCommands(player);
-            //player.Play();
+            player.Play(player.playlist);
             player.Dispose();
             
 
@@ -82,10 +72,6 @@ namespace MusicPlayer
             Console.ReadLine();
         }
 
-        //public static void Show_Message(object sender, PlayerEventArgs item)
-        //{
-        //    Console.WriteLine(item.Message);
-        //}
 
         /*
         public static List<Song> GetSongsData(out int minDuration, out int maxDuration, ref int totalDuration)

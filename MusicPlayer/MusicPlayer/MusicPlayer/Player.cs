@@ -14,32 +14,42 @@ namespace MusicPlayer
 {
     public class Player : GenericPlayer<Song>, IDisposable
     {
-
-        public event PlayerStateHandler SongStarted;
-        public event PlayerStateHandler SongsListChanged;
-        public event PlayerStateHandler PlayerStarted;
-        public event PlayerStateHandler OnError;
-        public event PlayerStateHandler OnWarning;
-
-
         public const string directory = @"D:\WavForPlayer\";
-        public string directoryForLoad;
         public List<Song> playlist;
-        private SoundPlayer _player= new SoundPlayer();
-        private bool _disposed = false;
+        private SoundPlayer _player;
+        private bool disposed = false;
         public Player() : base()
         {
 
         }
 
-        //public Player(string color) //: base(color)
-        //{
+        public Player(string color) : base(color)
+        {
 
-        //}
+        }
 
         public override void Play()
         {
-            PlayAsync(Items);
+            if (_isLocked)
+            {
+                return;
+            }
+            _isPlaying = true;
+            foreach (var song in Items)
+            {
+                //if (song.Like == true) Console.ForegroundColor = ConsoleColor.Green;     //BL8 -Player 2/3. LikeDislike
+                //else if (song.Like == false) Console.ForegroundColor = ConsoleColor.Red;
+
+                //L9 -HW -Player -2/3
+
+                //Skin.Render($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}"); 
+                _player = new SoundPlayer((directory + song.Name));
+                Skin.Render($"Player is playing: {song.Name}");
+                _player.PlaySync();
+                //_player.Dispose();
+                //Console.ResetColor();
+                System.Threading.Thread.Sleep(1000);
+            }
         }
 
         public void Play(bool loop) //B7-Player1/2. SongsListShuffle
@@ -54,71 +64,40 @@ namespace MusicPlayer
             }
         }
 
-        public override async void PlayAsync(List<Song> filteredSongs)          //BL8-Player4/4. FilterByGenre
+        public override void Play(List<Song> filteredSongs)          //BL8-Player4/4. FilterByGenre
         {
             if (_isLocked)
             {
                 return;
             }
-            PlayerStarted(this, new PlayerEventArgs("Player started"));
             _isPlaying = true;
-            try
+            if (filteredSongs.Count() == 0) Skin.Render("Nothing for play");
+            else
             {
-                if (filteredSongs.Count() == 0)
+                //Skin.Render("Filtered list");
+                foreach (var song in Items)
                 {
-                    throw new FileNotFoundException();
-                    throw new FailedToPlayException("Files didn't find", directoryForLoad);
-                }
-                else
-                {
+                    //if (song.Like == true) Console.ForegroundColor = ConsoleColor.Green;     //BL8 -Player 2/3. LikeDislike
+                    //else if (song.Like == false) Console.ForegroundColor = ConsoleColor.Red;
 
-                    //Skin.Render("Filtered list");
-                    foreach (var song in Items)
-                    {
-                        //Skin.Render($"Player is playing: {song.Name}");
+                    //L9 -HW -Player -2/3
 
-
-                        _player.SoundLocation = song.Path;
-                        await Task.Run(() =>
-                            {
-                                SongStarted(this, new PlayerEventArgs($"Player is playing: {song.Name}"));
-                                _player.PlaySync();
-                                System.Threading.Thread.Sleep(1000);
-                            });
-                        //PlaySongAsync(song);
-
-                    }
+                    //Skin.Render($"Player is playing: {song.Name.PlayerSubstring()}, genre: {song.Artist.Genre.PlayerSubstring()}");
+                    _player = new SoundPlayer((directory + song.Name));
+                    Skin.Render($"Player is playing: {song.Name}");
+                    _player.PlaySync();
+                    //_player.Dispose();
+                    //Console.ResetColor();
+                    System.Threading.Thread.Sleep(1000);
                 }
             }
-            catch(FileNotFoundException ex)
-            {
-                OnError(this, new PlayerEventArgs("Can't find files"));
-            }
-            catch (InvalidOperationException ex)
-            {
-                OnError(this, new PlayerEventArgs("Unknown file's format"));
-            }
-            catch(FailedToPlayException ex)
-            {
-                OnWarning(this, new PlayerEventArgs($"{ex.Message}{ex._path}"));
-            }
-            Clear();
         }
-        //public async Task PlaySongAsync(Song song)
-        //{
-        //    await Task.Run(() => 
-        //    {
-        //        SongStarted(this, new PlayerEventArgs($"Player is playing: {song.Name}"));
-        //        _player.PlaySync();
-        //    });
-        //}
 
         //B7-Player2/2. SongsListSort
         public void SongsListSort()
         {
             this.Items = this.Items.SortSongs();                        //L9 -HW -Player -1/3    
-            SongsListChanged(this, new PlayerEventArgs("SongList changed"));
-    }
+        }
 
         public Tuple<string, int, int, int> GetSongData(Song song)      //BL8 -Player1/3.SongTuples
         {
@@ -136,9 +115,9 @@ namespace MusicPlayer
             foreach (var song in Items)
             {
                 Tuple<string, int, int, int> songData = GetSongData(song);
-                //Skin.Render($"Name: {songData.Item1}, Time: {songData.Item2}:{songData.Item3}:{songData.Item4}");
+                Skin.Render($"Name: {songData.Item1}, Time: {songData.Item2}:{songData.Item3}:{songData.Item4}");
             }
-            //Skin.Clear();
+            Skin.Clear();
         }
 
         public List<Song> FilterByGenre(string genre)                       //BL8-Player4/4. FilterByGenre
@@ -155,15 +134,13 @@ namespace MusicPlayer
                     }
                 }
             }
-            SongsListChanged(this, new PlayerEventArgs("SongList filtered"));
             return filteredSongs;
         }
 
         public void Load(string directory)
         {
-            directoryForLoad = directory;
             List<Song> songs = new List<Song>();
-            var directoryInfo = new DirectoryInfo(directoryForLoad);
+            var directoryInfo = new DirectoryInfo(directory);
             var files = directoryInfo.GetFiles("*.wav");
             foreach (var file in files)
             {
@@ -173,7 +150,7 @@ namespace MusicPlayer
                     {
                         Name = file.Name,
                         Duration = file.Length,
-                        Path = file.FullName
+                        Path = file.DirectoryName
                     });
                 }
             }
@@ -212,18 +189,16 @@ namespace MusicPlayer
         protected virtual void Dispose(bool disposing)
         {
             // Check to see if Dispose has already been called.
-            if (!this._disposed)
+            if (!this.disposed)
             {
                 // If disposing equals true, dispose all managed
                 // and unmanaged resources.
                 if (disposing)
                 {
-                    playlist = null;
-                    //Skin = null;
-                    Items = null;
+                    // Dispose managed resources.
+                    _player.Dispose();
                 }
-                _player.Dispose();
-                _disposed = true;
+                disposed = true;
             }
         }
         ~Player()

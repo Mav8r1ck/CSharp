@@ -49,16 +49,13 @@
     <Compile Include="ClassicSkin.cs" />
     <Compile Include="ColorSkin.cs" />
     <Compile Include="Extantions\PlayerHelper.cs" />
-    <Compile Include="FailedToPlayException.cs" />
     <Compile Include="GenericPayer.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PlayerEventArgs.cs" />
     <Compile Include="PlayingItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ISkin.cs" />
     <Compile Include="Song.cs" />
-    <Compile Include="Visualizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
