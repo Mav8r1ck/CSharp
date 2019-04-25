@@ -1,0 +1,8 @@
+D:\A-7(8)-Multithreading\AL8-Diagnostic\bin\Debug\Advanced-Lesson-6-Diagnostic.dll
+D:\A-7(8)-Multithreading\AL8-Diagnostic\bin\Debug\Advanced-Lesson-6-Diagnostic.pdb
+D:\A-7(8)-Multithreading\AL8-Diagnostic\obj\Debug\AL8-Diagnostic.csprojAssemblyReference.cache
+D:\A-7(8)-Multithreading\AL8-Diagnostic\obj\Debug\Interop.mscoree.dll
+D:\A-7(8)-Multithreading\AL8-Diagnostic\obj\Debug\AL8-Diagnostic.csproj.ResolveComReference.cache
+D:\A-7(8)-Multithreading\AL8-Diagnostic\obj\Debug\AL8-Diagnostic.csproj.CoreCompileInputs.cache
+D:\A-7(8)-Multithreading\AL8-Diagnostic\obj\Debug\Advanced-Lesson-6-Diagnostic.dll
+D:\A-7(8)-Multithreading\AL8-Diagnostic\obj\Debug\Advanced-Lesson-6-Diagnostic.pdb
