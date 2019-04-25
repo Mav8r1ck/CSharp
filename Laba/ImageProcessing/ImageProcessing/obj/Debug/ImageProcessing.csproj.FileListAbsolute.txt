@@ -1,0 +1,11 @@
+D:\ImageProcessing\ImageProcessing\bin\Debug\ImageProcessing.exe.config
+D:\ImageProcessing\ImageProcessing\bin\Debug\ImageProcessing.exe
+D:\ImageProcessing\ImageProcessing\bin\Debug\ImageProcessing.pdb
+D:\ImageProcessing\ImageProcessing\obj\Debug\ImageProcessing.csprojAssemblyReference.cache
+D:\ImageProcessing\ImageProcessing\obj\Debug\ImageProcessing.csproj.CoreCompileInputs.cache
+D:\ImageProcessing\ImageProcessing\obj\Debug\ImageProcessing.exe
+D:\ImageProcessing\ImageProcessing\obj\Debug\ImageProcessing.pdb
+D:\ImageProcessing\ImageProcessing\obj\Debug\ImageProcessing.csproj.CopyComplete
+D:\ImageProcessing\ImageProcessing\bin\Debug\RestSharp.dll
+D:\ImageProcessing\ImageProcessing\bin\Debug\Yandex.Geocoder.dll
+D:\ImageProcessing\ImageProcessing\bin\Debug\RestSharp.xml
